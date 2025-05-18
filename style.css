@@ -1,32 +1,101 @@
-body{
+body {
     text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
 }
-.btn{
+
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.btn {
     height: 200px;
     width: 200px;
     border-radius: 20%;
     border: 10px solid black;
-    margin: 2.5rem;
+    transition: transform 0.1s, filter 0.3s;
 }
-.btn-container{
-    display: flex;
-    justify-content: center;
+
+.btn:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+    transform: scale(1.05);
 }
-.yellow{
-    background-color: orange;
-}
-.red{
+
+.red {
     background-color: rgb(254, 131, 151);
 }
-.purple{
+
+.yellow {
+    background-color: orange;
+}
+
+.purple {
     background-color: rgb(147, 147, 229);
 }
-.green{
+
+.green {
     background-color: rgb(27, 232, 232);
 }
-.flash{
-    background-color: white;
+
+.flash {
+    background-color: white !important;
 }
-.userflash{
-    background-color: green;
+
+.userflash {
+    filter: brightness(150%);
+}
+
+.game-over {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .btn {
+        width: 120px;
+        height: 120px;
+        margin: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
+
+.wrong-background {
+    background-color: #ff0000 !important;
+    transition: background-color 0.3s ease;
 }
