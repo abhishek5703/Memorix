@@ -15,6 +15,15 @@ let sounds = {
     wrong: new Audio("sounds/beep.mp3")
 };
 
+// How to Play button functionality
+document.querySelector(".how-to-play-btn").addEventListener("click", function() {
+    document.querySelector(".instructions").style.display = "block";
+});
+
+document.querySelector(".close-instructions").addEventListener("click", function() {
+    document.querySelector(".instructions").style.display = "none";
+});
+
 // Start game on keypress or touch
 function startGame() {
     if (!started) {
@@ -24,6 +33,7 @@ function startGame() {
 }
 document.addEventListener("keypress", startGame);
 document.addEventListener("touchstart", startGame, { once: true });
+
 
 // Flash button (game-generated)
 function gameFlash(btn) {

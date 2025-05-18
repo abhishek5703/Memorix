@@ -19,6 +19,67 @@ h2 {
     color: #444;
 }
 
+.how-to-play-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.how-to-play-btn:hover {
+    background-color: #45a049;
+}
+
+.instructions {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 100;
+    max-width: 80%;
+    width: 400px;
+}
+
+.instructions h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.instructions ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.close-instructions {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.close-instructions:hover {
+    background-color: #d32f2f;
+}
+
+
 .btn-container {
     display: flex;
     justify-content: center;
