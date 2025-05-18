@@ -32,8 +32,10 @@ h2 {
     height: 200px;
     width: 200px;
     border-radius: 20%;
-    border: 10px solid black;
+    border: 7px solid black;
     transition: transform 0.1s, filter 0.3s;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
 .btn:hover {
