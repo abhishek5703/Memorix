@@ -1,1 +1,1 @@
-# Simon-Says-Game
+# Memorix Game 
