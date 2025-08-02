@@ -6,7 +6,10 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1a1a2e, #0f1626);
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(15, 22, 38, 0.85)),
+    url('images/neural-bg.png') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
