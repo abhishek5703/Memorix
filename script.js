@@ -123,8 +123,8 @@ function resetGame() {
     level = 0;
 }
 
-// Add event listeners to buttons
-let allBtns = document.querySelectorAll(".btn");
+// Add event listeners to color tiles
+let allBtns = document.querySelectorAll(".btn-tile");
 for (const btn of allBtns) {
     btn.addEventListener("click", btnPress);
 }

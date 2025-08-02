@@ -3,32 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Memorix – Simon Memory Game</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Memorix – Simon Says Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Memorix</h1>
-    <h2>Press Start to Play</h2>
+  <div class="container">
+    <h1>🧠 Memorix</h1>
+    <h2 class="subtitle">Test your memory. How far can you go?</h2>
 
-    <div class="button-container">
-      <div class="btn yellow" id="yellow"></div>
-      <div class="btn red" id="red"></div>
-      <div class="btn green" id="green"></div>
-      <div class="btn purple" id="purple"></div>
+    <div class="button-group">
+      <button class="btn-glow start-btn">Start Game</button>
+      <button class="btn-glow restart-btn">Restart Game</button>
+      <button class="btn-glow how-to-play-btn">How to Play</button>
     </div>
 
-    <div class="control-buttons">
-      <button class="start-btn">Start Game</button>
-      <button class="restart-btn" style="display:none;">Restart</button>
-      <button class="how-to-play-btn">How to Play</button>
+    <div class="instructions hidden">
+      <div class="glass-box">
+        <h3>📘 How to Play</h3>
+        <ol>
+          <li>Click "Start Game" to begin.</li>
+          <li>Watch the sequence of flashing colors.</li>
+          <li>Repeat the sequence in the correct order.</li>
+          <li>Each level adds a new color.</li>
+          <li>If you make a mistake, the game ends!</li>
+        </ol>
+        <button class="btn-glow close-instructions">Got it!</button>
+      </div>
     </div>
 
-    <div class="instructions" style="display:none;">
-      <h3>How to Play</h3>
-      <p>Watch the color sequence carefully and repeat it by clicking the buttons in the same order.</p>
-      <p>Each level adds one new color to the sequence. Try to remember as many as you can!</p>
-      <button class="close-instructions">Close</button>
+    <div class="btn-container">
+      <div class="line-one">
+        <div class="btn-tile red" id="red"></div>
+        <div class="btn-tile yellow" id="yellow"></div>
+      </div>
+      <div class="line-two">
+        <div class="btn-tile green" id="green"></div>
+        <div class="btn-tile purple" id="purple"></div>
+      </div>
     </div>
   </div>
 
