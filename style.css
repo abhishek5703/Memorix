@@ -1,200 +1,147 @@
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 550px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 3rem;
-    margin-top: 1rem;
-    color: #333;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #f1f1f1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #444;
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-bottom: 2rem;
 }
 
-.how-to-play-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s;
-}
-
-.how-to-play-btn:hover {
-    background-color: #45a049;
-}
-
-.instructions {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    z-index: 100;
-    max-width: 80%;
-    width: 400px;
-}
-
-.instructions h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.instructions ol {
-    text-align: left;
-    padding-left: 20px;
-}
-
-.instructions li {
-    margin-bottom: 10px;
-}
-
-.close-instructions {
-    padding: 8px 16px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-}
-
-.close-instructions:hover {
-    background-color: #d32f2f;
-}
-
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem auto;
-    max-width: 500px;
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .btn {
-    height: 200px;
-    width: 200px;
-    border-radius: 20%;
-    border: 7px solid black;
-    transition: transform 0.1s, filter 0.3s;
-    margin-top: 15px;
-    margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  opacity: 0.9;
 }
 
 .btn:hover {
-    filter: brightness(1.2);
-    cursor: pointer;
-    transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
-.red {
-    background-color: rgb(254, 131, 151);
+.btn:active,
+.btn.userflash,
+.btn.flash {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px white;
 }
 
-.yellow {
-    background-color: orange;
+.yellow { background-color: #f1c40f; }
+.red    { background-color: #e74c3c; }
+.green  { background-color: #2ecc71; }
+.purple { background-color: #9b59b6; }
+
+.control-buttons {
+  margin-top: 1rem;
 }
 
-.purple {
-    background-color: rgb(147, 147, 229);
+button {
+  padding: 0.7rem 1.8rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.green {
-    background-color: rgb(27, 232, 232);
+button:hover {
+  background: #5dade2;
+  transform: translateY(-2px);
 }
 
-.flash {
-    background-color: white !important;
+.instructions {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-top: 1.5rem;
+  backdrop-filter: blur(5px);
 }
 
-.userflash {
-    filter: brightness(150%);
+.instructions p {
+  color: #ddd;
+  margin: 0.8rem 0;
 }
 
-.game-over {
-    animation: shake 0.4s;
-}
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
-
-/* Responsive Styling */
-@media (max-width: 600px) {
-    .btn {
-        width: 120px;
-        height: 120px;
-        margin: 0.5rem;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
+.close-instructions {
+  background-color: #e74c3c;
 }
 
 .wrong-background {
-    background-color: #ff0000 !important;
-    transition: background-color 0.3s ease;
+  background-color: #8b0000;
+  transition: background-color 0.3s ease;
 }
 
-.start-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s;
-    display: block;
-    margin: 0 auto 1rem;
+.game-over {
+  animation: shake 0.3s ease-in-out 2;
 }
 
-.start-btn:hover {
-    background-color: #45a049;
+@keyframes shake {
+  0% { transform: translateX(-10px); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
 }
 
-.restart-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s;
-    display: none;
-    margin: 0 auto 1rem;
-}
+@media (max-width: 600px) {
+  .button-container {
+    grid-template-columns: repeat(2, 120px);
+    gap: 15px;
+  }
 
-.restart-btn:hover {
-    background-color: #e67e22;
+  .btn {
+    width: 120px;
+    height: 120px;
+  }
+
+  .game-container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
 }

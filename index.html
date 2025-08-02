@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memorix – Simon Says Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memorix – Simon Memory Game</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="game-container">
     <h1>Memorix</h1>
-    <h2>Press the Start button to begin</h2>
-    <button class="start-btn">Start Game</button>
-    <button class="restart-btn">Restart Game</button>
-    <button class="how-to-play-btn">How to Play</button>
+    <h2>Press Start to Play</h2>
 
-    <div class="instructions">
-        <h3>How to Play</h3>
-        <ol>
-            <li>Press any key or tap the screen to start</li>
-            <li>Watch the sequence of flashing colors</li>
-            <li>Repeat the sequence by clicking the colors in the same order</li>
-            <li>Each level will add one more color to the sequence</li>
-            <li>If you make a mistake, the game will end</li>
-        </ol>
-        <button class="close-instructions">Got it!</button>
+    <div class="button-container">
+      <div class="btn yellow" id="yellow"></div>
+      <div class="btn red" id="red"></div>
+      <div class="btn green" id="green"></div>
+      <div class="btn purple" id="purple"></div>
     </div>
 
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="btn red" type="button" id="red"></div>
-            <div class="btn yellow" type="button" id="yellow"></div>
-        </div>
-        <div class="line-two">
-            <div class="btn green" type="button" id="green"></div>
-            <div class="btn purple" type="button" id="purple"></div>
-        </div>
+    <div class="control-buttons">
+      <button class="start-btn">Start Game</button>
+      <button class="restart-btn" style="display:none;">Restart</button>
+      <button class="how-to-play-btn">How to Play</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="instructions" style="display:none;">
+      <h3>How to Play</h3>
+      <p>Watch the color sequence carefully and repeat it by clicking the buttons in the same order.</p>
+      <p>Each level adds one new color to the sequence. Try to remember as many as you can!</p>
+      <button class="close-instructions">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
